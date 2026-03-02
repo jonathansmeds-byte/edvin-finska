@@ -1,0 +1,463 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Calibri;}{\f2\fnil\fcharset1 Segoe UI Symbol;}{\f3\fnil\fcharset1 Cambria Math;}{\f4\fnil\fcharset1 Segoe UI Emoji;}{\f5\fnil\fcharset1 Segoe UI Symbol;}}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mmathFont3\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 <!doctype html>\par
+<html lang="sv">\par
+<head>\par
+  <meta charset="utf-8" />\par
+  <meta name="viewport" content="width=device-width, initial-scale=1" />\par
+  <title>Finska test \f1\endash  Niv\f0\'e5 1\f1\endash 2</title>\par
+  <style>\par
+    :root \{ --pad: 16px; \}\par
+    body \{ font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; background:#0b0c10; color:#eaf0ff; \}\par
+    header \{ padding: 18px var(--pad); border-bottom: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.02); position: sticky; top:0; backdrop-filter: blur(6px); \}\par
+    h1 \{ font-size: 18px; margin: 0 0 6px; \}\par
+    .sub \{ opacity:.8; font-size: 13px; \}\par
+    main \{ max-width: 860px; margin: 0 auto; padding: var(--pad); \}\par
+    .card \{ background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.10); border-radius: 14px; padding: 14px; margin: 12px 0; \}\par
+    label \{ display:block; margin: 10px 0 6px; opacity:.9; \}\par
+    select, input[type="text"], button \{ width: 100%; padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.06); color: #eaf0ff; font-size: 16px; \}\par
+    button \{ cursor:pointer; background: rgba(120,180,255,.18); border-color: rgba(120,180,255,.28); \}\par
+    button:hover \{ background: rgba(120,180,255,.26); \}\par
+    .row \{ display:grid; grid-template-columns: 1fr 1fr; gap: 10px; \}\par
+    @media (max-width: 640px)\{ .row\{ grid-template-columns: 1fr; \} \}\par
+    .q \{ font-size: 18px; line-height: 1.35; \}\par
+    .meta \{ display:flex; gap: 10px; flex-wrap: wrap; opacity:.85; font-size: 13px; margin-top: 8px; \}\par
+    .pill \{ padding: 4px 10px; border-radius: 999px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.10); \}\par
+    .fb \{ margin-top: 10px; padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,.10); \}\par
+    .ok \{ background: rgba(80,200,120,.12); border-color: rgba(80,200,120,.25); \}\par
+    .near \{ background: rgba(255,200,80,.12); border-color: rgba(255,200,80,.25); \}\par
+    .bad \{ background: rgba(255,90,90,.12); border-color: rgba(255,90,90,.25); \}\par
+    .small \{ font-size: 13px; opacity: .9; \}\par
+    .muted \{ opacity: .7; \}\par
+    .actions \{ display:flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; \}\par
+    .actions button \{ flex: 1; min-width: 160px; \}\par
+    .kbd \{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 8px; border: 1px solid rgba(255,255,255,.10); \}\par
+    footer \{ padding: 18px var(--pad); opacity:.7; font-size: 12px; \}\par
+    a \{ color: #b9d5ff; \}\par
+  </style>\par
+</head>\par
+<body>\par
+<header>\par
+  <h1>Finska test \endash  Niv\f0\'e5 1\f1\endash 2</h1>\par
+  <div class="sub">Ord + meningar \bullet  slumpm\f0\'e4ssigt \f1\bullet  FI\f2\u8596?\f0 SV \f1\bullet  feedback + po\f0\'e4ng</div>\par
+</header>\par
+\par
+<main>\par
+  <div class="card" id="setupCard">\par
+    <div class="row">\par
+      <div>\par
+        <label for="levelSel">Niv\'e5</label>\par
+        <select id="levelSel">\par
+          <option value="1">Niv\'e5 1</option>\par
+          <option value="2" selected>Niv\'e5 2</option>\par
+          <option value="mix12">Mix: Niv\'e5 1 + 2</option>\par
+        </select>\par
+      </div>\par
+      <div>\par
+        <label for="modeSel">Riktning</label>\par
+        <select id="modeSel">\par
+          <option value="mix" selected>Blanda FI\f3\u8594?\f0 SV och SV\f3\u8594?\f0 FI</option>\par
+          <option value="fi2sv">Bara FI\f3\u8594?\f0 SV</option>\par
+          <option value="sv2fi">Bara SV\f3\u8594?\f0 FI</option>\par
+        </select>\par
+      </div>\par
+    </div>\par
+\par
+    <div class="row">\par
+      <div>\par
+        <label for="typeSel">Inneh\'e5ll</label>\par
+        <select id="typeSel">\par
+          <option value="mix" selected>Blanda ord + meningar</option>\par
+          <option value="words">Bara ord</option>\par
+          <option value="sentences">Bara meningar</option>\par
+        </select>\par
+      </div>\par
+      <div>\par
+        <label for="strictSel">R\'e4ttning</label>\par
+        <select id="strictSel">\par
+          <option value="lenient" selected>Sn\'e4ll (till\'e5ter sm\'e5 skillnader)</option>\par
+          <option value="strict">Strikt (m\'e5ste matcha exakt)</option>\par
+        </select>\par
+      </div>\par
+    </div>\par
+\par
+    <div class="actions">\par
+      <button id="startBtn">Starta test</button>\par
+      <button id="resetBtn" title="Rensar po\'e4ng och b\'f6rjar om">Nollst\'e4ll</button>\par
+    </div>\par
+\par
+    <div class="small muted" style="margin-top:10px">\par
+      Tips: P\'e5 dator kan Edvin trycka <span class="kbd">Enter</span> f\'f6r att svara.\par
+    </div>\par
+  </div>\par
+\par
+  <div class="card" id="quizCard" style="display:none">\par
+    <div class="q" id="questionText"></div>\par
+    <div class="meta" id="metaLine"></div>\par
+\par
+    <label for="answerInput" id="answerLabel">Skriv ditt svar</label>\par
+    <input id="answerInput" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" />\par
+\par
+    <div class="actions">\par
+      <button id="submitBtn">Svara</button>\par
+      <button id="skipBtn" title="Hoppa \'f6ver (r\'e4knas som fel)">Hoppa \'f6ver</button>\par
+      <button id="endBtn" title="Avsluta och visa resultat">Avsluta</button>\par
+    </div>\par
+\par
+    <div id="feedbackBox" class="fb" style="display:none"></div>\par
+  </div>\par
+\par
+  <div class="card" id="resultCard" style="display:none">\par
+    <div class="q">Resultat</div>\par
+    <div id="resultText" style="margin-top:8px"></div>\par
+    <div class="actions">\par
+      <button id="againBtn">K\'f6r igen (ny slumpning)</button>\par
+      <button id="backBtn">Till inst\'e4llningar</button>\par
+    </div>\par
+  </div>\par
+</main>\par
+\par
+<footer>\par
+  Byggd f\'f6r Edvin. Du kan hosta denna fil gratis via t.ex. GitHub Pages / Netlify / Vercel.\par
+</footer>\par
+\par
+<script>\par
+/** =========================\par
+ *  DATA: L\'e4gg till Niv\'e5 3\f1\endash 5 senare genom att fylla p\f0\'e5 h\'e4r.\par
+ *  Struktur:\par
+ *  \{ kind:"word"|"sentence", fi:"...", sv:"..." \}\par
+ *  ========================= */\par
+\par
+const LEVELS = \{\par
+  1: [\par
+    // Niv\'e5 1 \f1\endash  du kan l\f0\'e4gga ord och/eller meningar h\'e4r (tomt eller l\'e4ttare inneh\'e5ll)\par
+    // Exempel (byt/komplettera fritt):\par
+    \{ kind:"word", fi:"ihmemaa", sv:"sagoland / underland" \},\par
+    \{ kind:"word", fi:"ik\'e4vin", sv:"tr\'e5kigast / v\'e4rst" \},\par
+  ],\par
+  2: [\par
+    // Ord (utifr\'e5n materialet ni jobbar med)\par
+    \{ kind:"word", fi:"ihmemaa", sv:"sagoland / underland" \},\par
+    \{ kind:"word", fi:"ik\'e4vin", sv:"tr\'e5kigast / v\'e4rst" \},\par
+    \{ kind:"word", fi:"ilmoittautua", sv:"anm\'e4la sig" \},\par
+    \{ kind:"word", fi:"itsekseen", sv:"f\'f6r sig sj\'e4lv" \},\par
+    \{ kind:"word", fi:"komea", sv:"stilig / st\'e5tlig" \},\par
+    \{ kind:"word", fi:"kunnostaa", sv:"renovera / fixa i skick" \},\par
+    \{ kind:"word", fi:"k\'e4rsi\'e4", sv:"lida" \},\par
+    \{ kind:"word", fi:"k\'e4sitell\'e4", sv:"behandla / hantera" \},\par
+    \{ kind:"word", fi:"k\'e4sivoima", sv:"armstyrka" \},\par
+    \{ kind:"word", fi:"lajitella", sv:"sortera" \},\par
+    \{ kind:"word", fi:"loputon", sv:"\'e4ndl\'f6s" \},\par
+    \{ kind:"word", fi:"lounastauko", sv:"lunchpaus" \},\par
+    \{ kind:"word", fi:"mieluisin", sv:"favorit / mest omtyckt" \},\par
+    \{ kind:"word", fi:"nurmi", sv:"gr\'e4s / gr\'e4smatta" \},\par
+    \{ kind:"word", fi:"piha-alue", sv:"g\'e5rdsomr\'e5de" \},\par
+    \{ kind:"word", fi:"ponnistaa", sv:"ta sats / sparka ifr\'e5n" \},\par
+    \{ kind:"word", fi:"porautua", sv:"borra sig in / tr\'e4nga sig in" \},\par
+    \{ kind:"word", fi:"tehokas", sv:"effektiv" \},\par
+    \{ kind:"word", fi:"vier\'e4ht\'e4\'e4", sv:"rinna iv\'e4g (om tid)" \},\par
+    \{ kind:"word", fi:"ver\'e4j\'e4", sv:"grind" \},\par
+    \{ kind:"word", fi:"viaton", sv:"oskyldig" \},\par
+    \{ kind:"word", fi:"ty\'f6turvallisuus", sv:"arbetss\'e4kerhet" \},\par
+\par
+    // Understrukna meningar (FI)\par
+    \{ kind:"sentence", fi:"Olen el\'e4m\'e4ni aikana tehnyt ty\'f6kseni kaikenlaista.", sv:"Jag har under mitt liv arbetat med allt m\'f6jligt." \},\par
+    \{ kind:"sentence", fi:"Mutta pikaruokaravintolassa ty\'f6skentely on t\'e4h\'e4n menness\'e4 ollut varmasti ik\'e4vin homma.", sv:"Men att arbeta p\'e5 en snabbmatsrestaurang har hittills s\'e4kert varit det tr\'e5kigaste jobbet." \},\par
+    \{ kind:"sentence", fi:"15-vuotiaana haaveilin viel\'e4 lounastauoista hampurilaisten ja pirtel\'f6iden ihmemaassa.", sv:"Som 15-\'e5ring dr\'f6mde jag \'e4nnu om lunchpauser i hamburgarnas och milkshakens sagoland." \},\par
+    \{ kind:"sentence", fi:"Mutta \'e4kki\'e4 siit\'e4kin katosi hohto.", sv:"Men pl\'f6tsligt f\'f6rsvann glansen ocks\'e5 fr\'e5n det." \},\par
+    \{ kind:"sentence", fi:"Ty\'f6h\'f6n kuului loputon m\'e4\'e4r\'e4 hygienias\'e4\'e4nt\'f6j\'e4 ja muita muistettavia asioita.", sv:"Till jobbet h\'f6rde en \'e4ndl\'f6s m\'e4ngd hygienregler och andra saker att komma ih\'e5g." \},\par
+    \{ kind:"sentence", fi:"Oli hyvin tarkkaa, miten ruokaa k\'e4siteltiin.", sv:"Det var mycket noggrant hur maten hanterades." \},\par
+    \{ kind:"sentence", fi:"Iso osa ajasta kului kiireisess\'e4 keitti\'f6ss\'e4.", sv:"En stor del av tiden gick \'e5t i det stressiga k\'f6ket." \},\par
+    \{ kind:"sentence", fi:"Yht\'e4 stressaavaa oli asiakaspalvelu.", sv:"Minst lika stressigt var kundservice." \},\par
+    \{ kind:"sentence", fi:"Piti olla samaan aikaan tehokas ja kohtelias.", sv:"Man m\'e5ste vara effektiv och artig p\'e5 samma g\'e5ng." \},\par
+    \{ kind:"sentence", fi:"Kiire ei hellitt\'e4nyt koskaan.", sv:"Stressen/hetsen l\'e4ttade aldrig." \},\par
+    \{ kind:"sentence", fi:"Mieluisin ty\'f6teht\'e4v\'e4, johon ilmoittauduin usein vapaaehtoiseksi, oli roskien vieminen.", sv:"Min favorituppgift, som jag ofta anm\'e4lde mig frivilligt till, var att ta ut soporna." \},\par
+    \{ kind:"sentence", fi:"Siin\'e4 vier\'e4hti helposti 20 minuuttia ty\'f6ajasta mukavassa hiljaisuudessa.", sv:"D\'e4r rann l\'e4tt 20 minuter av arbetstiden iv\'e4g i behaglig tystnad." \},\par
+  ],\par
+  // 3,4,5 kan du l\'e4gga till senare\par
+\};\par
+\par
+/** =========================\par
+ *  QUIZ-ENGINE\par
+ *  ========================= */\par
+\par
+let deck = [];\par
+let idx = 0;\par
+let score = 0;\par
+let attempts = 0;\par
+let current = null;\par
+let currentDirection = "fi2sv"; // or sv2fi\par
+let strictness = "lenient";\par
+\par
+const setupCard = document.getElementById("setupCard");\par
+const quizCard = document.getElementById("quizCard");\par
+const resultCard = document.getElementById("resultCard");\par
+\par
+const levelSel = document.getElementById("levelSel");\par
+const modeSel = document.getElementById("modeSel");\par
+const typeSel = document.getElementById("typeSel");\par
+const strictSel = document.getElementById("strictSel");\par
+\par
+const startBtn = document.getElementById("startBtn");\par
+const resetBtn = document.getElementById("resetBtn");\par
+\par
+const questionText = document.getElementById("questionText");\par
+const metaLine = document.getElementById("metaLine");\par
+const answerInput = document.getElementById("answerInput");\par
+const submitBtn = document.getElementById("submitBtn");\par
+const skipBtn = document.getElementById("skipBtn");\par
+const endBtn = document.getElementById("endBtn");\par
+const feedbackBox = document.getElementById("feedbackBox");\par
+\par
+const resultText = document.getElementById("resultText");\par
+const againBtn = document.getElementById("againBtn");\par
+const backBtn = document.getElementById("backBtn");\par
+\par
+function shuffle(arr)\{\par
+  for(let i = arr.length - 1; i > 0; i--)\{\par
+    const j = Math.floor(Math.random() * (i + 1));\par
+    [arr[i], arr[j]] = [arr[j], arr[i]];\par
+  \}\par
+  return arr;\par
+\}\par
+\par
+// Normalisering f\'f6r "sn\'e4ll" r\'e4ttning: trim, lowercase, collapse spaces, ta bort vissa skiljetecken.\par
+function normalize(s)\{\par
+  return (s ?? "")\par
+    .toString()\par
+    .trim()\par
+    .toLowerCase()\par
+    .replace(/[\ldblquote\rdblquote "'.!,?;:()[\\]\{\}]/g, "")\par
+    .replace(/\\s+/g, " ");\par
+\}\par
+\par
+// En enkel "n\'e4ra"-koll: om normaliserat svar \'e4r substring eller har h\'f6g likhet via token-overlap.\par
+function isNear(user, correct)\{\par
+  const u = normalize(user);\par
+  const c = normalize(correct);\par
+\par
+  if(!u) return false;\par
+  if(u === c) return true;\par
+  if(c.includes(u) || u.includes(c)) return true;\par
+\par
+  const ut = new Set(u.split(" "));\par
+  const ct = new Set(c.split(" "));\par
+  let inter = 0;\par
+  for(const t of ut) if(ct.has(t)) inter++;\par
+  const jaccard = inter / Math.max(1, new Set([...ut, ...ct]).size);\par
+\par
+  return jaccard >= 0.6;\par
+\}\par
+\par
+// Till\'e5t flera facitvarianter separerade med "/"\par
+function splitAnswers(s)\{\par
+  return (s ?? "").split("/").map(x => x.trim()).filter(Boolean);\par
+\}\par
+\par
+function buildDeck()\{\par
+  const levelVal = levelSel.value;\par
+  let items = [];\par
+  if(levelVal === "mix12")\{\par
+    items = [...LEVELS[1], ...LEVELS[2]];\par
+  \} else \{\par
+    items = [...(LEVELS[levelVal] ?? [])];\par
+  \}\par
+\par
+  const t = typeSel.value;\par
+  if(t === "words") items = items.filter(x => x.kind === "word");\par
+  if(t === "sentences") items = items.filter(x => x.kind === "sentence");\par
+\par
+  // skapa "kort" som kan fr\'e5gas i b\'e5da riktningar (eller vald riktning)\par
+  const mode = modeSel.value;\par
+  const cards = [];\par
+\par
+  for(const it of items)\{\par
+    if(mode === "fi2sv" || mode === "mix")\{\par
+      cards.push(\{ ...it, ask:"fi", answer:"sv" \});\par
+    \}\par
+    if(mode === "sv2fi" || mode === "mix")\{\par
+      cards.push(\{ ...it, ask:"sv", answer:"fi" \});\par
+    \}\par
+  \}\par
+\par
+  return shuffle(cards);\par
+\}\par
+\par
+function showCard()\{\par
+  feedbackBox.style.display = "none";\par
+  answerInput.value = "";\par
+  answerInput.focus();\par
+\par
+  current = deck[idx];\par
+  if(!current)\{\par
+    endQuiz();\par
+    return;\par
+  \}\par
+\par
+  currentDirection = (current.ask === "fi") ? "fi2sv" : "sv2fi";\par
+\par
+  const prompt = current[current.ask];\par
+  questionText.textContent = prompt;\par
+\par
+  metaLine.innerHTML = "";\par
+  const p1 = document.createElement("div");\par
+  p1.className = "pill";\par
+  p1.textContent = `Fr\'e5ga $\{idx+1\} / $\{deck.length\}`;\par
+  const p2 = document.createElement("div");\par
+  p2.className = "pill";\par
+  p2.textContent = current.kind === "word" ? "Ord" : "Mening";\par
+  const p3 = document.createElement("div");\par
+  p3.className = "pill";\par
+  p3.textContent = currentDirection === "fi2sv" ? "FI \f3\u8594?\f0  SV" : "SV \f3\u8594?\f0  FI";\par
+  const p4 = document.createElement("div");\par
+  p4.className = "pill";\par
+  p4.textContent = `Po\'e4ng: $\{score\}/$\{attempts\}`;\par
+  metaLine.append(p1,p2,p3,p4);\par
+\par
+  document.getElementById("answerLabel").textContent =\par
+    currentDirection === "fi2sv" ? "Skriv p\'e5 svenska" : "Skriv p\'e5 finska";\par
+\}\par
+\par
+function grade(userInput)\{\par
+  const correctRaw = current[current.answer];\par
+  const accepted = splitAnswers(correctRaw);\par
+\par
+  if(strictness === "strict")\{\par
+    for(const a of accepted)\{\par
+      if(userInput.trim() === a) return \{ verdict:"ok", correct:a, note:"R\'e4tt!" \};\par
+    \}\par
+    return \{ verdict:"bad", correct: accepted[0] ?? correctRaw, note:"Fel." \};\par
+  \}\par
+\par
+  // lenient\par
+  for(const a of accepted)\{\par
+    if(normalize(userInput) === normalize(a)) return \{ verdict:"ok", correct:a, note:"R\'e4tt!" \};\par
+  \}\par
+  for(const a of accepted)\{\par
+    if(isNear(userInput, a)) return \{ verdict:"near", correct:a, note:"N\'e4ra!" \};\par
+  \}\par
+  return \{ verdict:"bad", correct: accepted[0] ?? correctRaw, note:"Fel." \};\par
+\}\par
+\par
+function feedback(verdict, correct, user)\{\par
+  const box = feedbackBox;\par
+  box.style.display = "block";\par
+  box.className = "fb " + (verdict === "ok" ? "ok" : verdict === "near" ? "near" : "bad");\par
+\par
+  let msg = "";\par
+  if(verdict === "ok") msg = "\f2\u9989?\f0  Bra jobbat! R\'e4tt svar.";\par
+  if(verdict === "near") msg = "\f4\u-10179?\u-8216?\f0  N\'e4ra! Kolla facit och skriv g\'e4rna en g\'e5ng till i huvudet.";\par
+  if(verdict === "bad") msg = "\f2\u10060?\f0  Bra f\'f6rs\'f6k \f1\emdash  h\f0\'e4r \'e4r r\'e4tt svar.";\par
+\par
+  const extra = (currentDirection === "fi2sv")\par
+    ? `Facit (sv): <b>$\{escapeHtml(correct)\}</b>`\par
+    : `Facit (fi): <b>$\{escapeHtml(correct)\}</b>`;\par
+\par
+  const tip = verdict !== "ok"\par
+    ? `<div class="small muted" style="margin-top:8px">Tips: Fokusera p\'e5 nyckelorden och ordf\'f6ljd.</div>`\par
+    : `<div class="small muted" style="margin-top:8px">Forts\'e4tt s\'e5! \f5\u-10179?\u-9046?\f0 </div>`;\par
+\par
+  box.innerHTML = `\par
+    <div>$\{msg\}</div>\par
+    <div style="margin-top:8px">$\{extra\}</div>\par
+    <div class="small muted" style="margin-top:6px">Ditt svar: "$\{escapeHtml(user)\}"</div>\par
+    $\{tip\}\par
+  `;\par
+\}\par
+\par
+function escapeHtml(s)\{\par
+  return (s ?? "").toString()\par
+    .replaceAll("&","&amp;")\par
+    .replaceAll("<","&lt;")\par
+    .replaceAll(">","&gt;")\par
+    .replaceAll('"',"&quot;");\par
+\}\par
+\par
+function submit()\{\par
+  const user = answerInput.value;\par
+  attempts++;\par
+\par
+  const g = grade(user);\par
+  if(g.verdict === "ok") score++;\par
+  // "near" r\'e4knas inte som po\'e4ng, men du kan \'e4ndra om du vill\par
+\par
+  feedback(g.verdict, g.correct, user);\par
+\par
+  // g\'e5 vidare efter kort paus (s\'e5 man hinner l\'e4sa). P\'e5 mobil \'e4r detta sk\'f6nt.\par
+  setTimeout(() => \{\par
+    idx++;\par
+    showCard();\par
+  \}, 1200);\par
+\}\par
+\par
+function skip()\{\par
+  attempts++;\par
+  feedback("bad", current[current.answer], "(hoppade \'f6ver)");\par
+  setTimeout(() => \{\par
+    idx++;\par
+    showCard();\par
+  \}, 700);\par
+\}\par
+\par
+function startQuiz()\{\par
+  strictness = strictSel.value;\par
+  deck = buildDeck();\par
+  idx = 0;\par
+  score = 0;\par
+  attempts = 0;\par
+\par
+  if(deck.length === 0)\{\par
+    alert("Inget inneh\'e5ll valt. L\'e4gg till data i LEVELS eller v\'e4lj annan inst\'e4llning.");\par
+    return;\par
+  \}\par
+\par
+  setupCard.style.display = "none";\par
+  resultCard.style.display = "none";\par
+  quizCard.style.display = "block";\par
+\par
+  showCard();\par
+\}\par
+\par
+function endQuiz()\{\par
+  quizCard.style.display = "none";\par
+  resultCard.style.display = "block";\par
+  const pct = attempts ? Math.round((score/attempts)*100) : 0;\par
+  const msg =\par
+    pct >= 90 ? "\f5\u-10179?\u-8923?\f0  Super! Du \'e4r riktigt stark p\'e5 det h\'e4r."\par
+    : pct >= 75 ? "\f5\u-10179?\u-9046?\f0  Bra niv\'e5! Lite till s\'e5 sitter det."\par
+    : pct >= 50 ? "\f5\u-10179?\u-9139?\f0  Helt okej \f1\emdash  forts\f0\'e4tt n\'f6ta s\'e5 lossnar det."\par
+    : "\f5\u-10180?\u-8399?\f0  Bra att du tr\'e4nar! Vi tar en runda till.";\par
+\par
+  resultText.innerHTML = `\par
+    <div>Po\'e4ng: <b>$\{score\}</b> av <b>$\{attempts\}</b> ($\{pct\}%).</div>\par
+    <div style="margin-top:8px">$\{msg\}</div>\par
+  `;\par
+\}\par
+\par
+function resetAll()\{\par
+  idx = 0; score = 0; attempts = 0; deck = [];\par
+  quizCard.style.display = "none";\par
+  resultCard.style.display = "none";\par
+  setupCard.style.display = "block";\par
+\}\par
+\par
+startBtn.addEventListener("click", startQuiz);\par
+resetBtn.addEventListener("click", resetAll);\par
+againBtn.addEventListener("click", startQuiz);\par
+backBtn.addEventListener("click", resetAll);\par
+\par
+submitBtn.addEventListener("click", submit);\par
+skipBtn.addEventListener("click", skip);\par
+endBtn.addEventListener("click", endQuiz);\par
+\par
+answerInput.addEventListener("keydown", (e) => \{\par
+  if(e.key === "Enter")\{\par
+    e.preventDefault();\par
+    submit();\par
+  \}\par
+\});\par
+</script>\par
+</body>\par
+</html>\lang9\par
+}
+ 
