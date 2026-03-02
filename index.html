@@ -1,12 +1,228 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Test</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edvins finskaträning</title>
+
+<style>
+
+body{
+font-family:Arial, sans-serif;
+background:#0b0c10;
+color:white;
+margin:0;
+padding:40px;
+text-align:center;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+}
+
+.card{
+background:#1a1c22;
+padding:30px;
+border-radius:12px;
+margin-top:20px;
+}
+
+button{
+padding:12px 20px;
+font-size:16px;
+border:none;
+border-radius:8px;
+background:#4fa3ff;
+color:white;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:#2d8df5;
+}
+
+input{
+padding:12px;
+font-size:16px;
+width:100%;
+margin-top:10px;
+border-radius:8px;
+border:none;
+}
+
+#feedback{
+margin-top:15px;
+font-size:18px;
+}
+
+.score{
+margin-top:10px;
+opacity:0.8;
+}
+
+</style>
+
 </head>
+
 <body>
-  <h1>Det här är renderad HTML ✅</h1>
-  <p>Om du ser detta som rubrik, funkar Pages.</p>
+
+<div class="container">
+
+<h1>Edvins finskaträning</h1>
+
+<div class="card">
+
+<select id="level">
+<option value="1">Nivå 1</option>
+<option value="2">Nivå 2</option>
+<option value="mix">Blanda nivåer</option>
+</select>
+
+<br><br>
+
+<button onclick="startQuiz()">Starta test</button>
+
+</div>
+
+<div class="card" id="quiz" style="display:none">
+
+<h2 id="question"></h2>
+
+<input id="answer" placeholder="Skriv ditt svar">
+
+<br>
+
+<button onclick="checkAnswer()">Svara</button>
+
+<div id="feedback"></div>
+
+<div class="score" id="score"></div>
+
+</div>
+
+</div>
+
+<script>
+
+let questions = [
+
+{fi:"ihmemaa", sv:"sagoland"},
+{fi:"ikävin", sv:"tråkigast"},
+{fi:"ilmoittautua", sv:"anmäla sig"},
+{fi:"itsekseen", sv:"för sig själv"},
+{fi:"komea", sv:"stilig"},
+{fi:"kunnostaa", sv:"renovera"},
+{fi:"kärsiä", sv:"lida"},
+{fi:"käsitellä", sv:"behandla"},
+{fi:"lajitella", sv:"sortera"},
+{fi:"loputon", sv:"ändlös"},
+{fi:"lounastauko", sv:"lunchpaus"},
+{fi:"mieluisin", sv:"favorit"},
+{fi:"tehokas", sv:"effektiv"},
+{fi:"veräjä", sv:"grind"},
+{fi:"viaton", sv:"oskyldig"}
+
+];
+
+let sentences=[
+
+{
+fi:"Kiire ei hellittänyt koskaan.",
+sv:"Stressen lättade aldrig."
+},
+
+{
+fi:"Iso osa ajasta kului kiireisessä keittiössä.",
+sv:"En stor del av tiden gick åt i det stressiga köket."
+},
+
+{
+fi:"Piti olla samaan aikaan tehokas ja kohtelias.",
+sv:"Man måste vara effektiv och artig på samma gång."
+},
+
+{
+fi:"Olen elämäni aikana tehnyt työkseni kaikenlaista.",
+sv:"Jag har arbetat med allt möjligt i mitt liv."
+}
+
+]
+
+let current
+let direction
+let score=0
+let total=0
+
+function startQuiz(){
+
+document.getElementById("quiz").style.display="block"
+
+nextQuestion()
+
+}
+
+function random(arr){
+return arr[Math.floor(Math.random()*arr.length)]
+}
+
+function nextQuestion(){
+
+let all=[...questions,...sentences]
+
+current=random(all)
+
+direction=Math.random()>0.5 ? "fi" : "sv"
+
+if(direction=="fi"){
+document.getElementById("question").innerText=current.fi
+}else{
+document.getElementById("question").innerText=current.sv
+}
+
+document.getElementById("answer").value=""
+document.getElementById("feedback").innerText=""
+
+}
+
+function normalize(text){
+return text.toLowerCase().trim()
+}
+
+function checkAnswer(){
+
+let user=normalize(document.getElementById("answer").value)
+
+let correct=direction=="fi"
+? normalize(current.sv)
+: normalize(current.fi)
+
+total++
+
+if(user===correct){
+
+score++
+
+document.getElementById("feedback").innerText="✅ Rätt!"
+
+}else{
+
+document.getElementById("feedback").innerText="❌ Rätt svar: "+correct
+
+}
+
+document.getElementById("score").innerText="Poäng: "+score+" / "+total
+
+setTimeout(nextQuestion,1200)
+
+}
+
+</script>
+
 </body>
+
 </html>
